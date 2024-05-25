@@ -1,0 +1,96 @@
+.container {
+    position: relative;
+}
+
+.head {
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 180px;
+    margin-top: 20px;
+}
+
+
+.head h1 {
+    margin-left: 180px;
+}
+
+.head img {
+    width: 390px;
+    height: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 50px;
+}
+
+.form {
+    text-align: center;
+}
+
+.line-input {
+    margin-top: 30px;
+    border: none;
+    border-bottom: 1px solid #b8b8bb;
+    /* You can adjust the color as needed */
+    outline: none;
+    width: 500px;
+}
+
+.sign-in-button {
+    background-color: #0640ff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 250px;
+    margin-top: 20px;
+
+}
+
+.sign-in-button:hover {
+    background-color: #4f73e0; 
+
+}
+.help {
+    display: flex;
+    position: relative;
+    justify-content: space-between; 
+    margin-top: 20px; 
+}
+
+.help1,
+.forget {
+    flex: 1; 
+}
+
+.help1 {
+    text-align: left; 
+}
+
+.forget {
+    text-align: right;
+}
+
+.video {
+    position: absolute;
+    margin-top: 150px;
+    top: 0;
+    right: 600px;
+}
+
+.video img {
+    width: 700px;
+    height: 300px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.register a
+{
+    color: #fff;
+    margin-right: 200px;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    
+    </script>
+    <style>
+        /* Add your CSS styles here */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .head {
+            text-align: center;
+        }
+
+        .form {
+            margin-top: 20px;
+        }
+
+        .button {
+            margin-top: 20px;
+        }
+
+        .help {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .register-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .video {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #video {
+            width: 320px;
+            height: 240px;
+            border: 1px solid black;
+        }
+
+        #loginButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            margin-left: 150px;
+        }
+
+        #loginButton:hover {
+            background-color: #45a049;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <img src="/static/images/logo.png" alt="logo of vishwakarma university" height="100" width="390" />
+            <h1>Sign in</h1>
+            <div class="form">
+                <div id="video-container">
+            
+                    <canvas id="canvas">        <video id="video" autoplay></video></canvas>
+                </div>
+                <div class="button">
+                    <button id="loginButton" onclick="login()">Login</button><br>
+                </div>
+                <div class="help">
+                    <div class="help1">
+                        <a href="/help"> help</a>
+                    </div>
+                    <div class="forget">
+                        <a href="forget"> forget password</a>
+                    </div>
+                </div>
+            </div>
+            <div class="register-link">
+                <!-- Changed href attribute to /register -->
+                <a href="/register" class="register-button">Sign Up</a>
+            </div>
+            <div class="video">
+                <img src="/static/images/landing.a9a59abe.webp" alt="logo of eduplus" height="100" width="390" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openCamera() {
+            var videoContainer = document.getElementById('video-container');
+            videoContainer.style.display = 'flex';
+
+            var video = document.getElementById('video');
+
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    video.srcObject = stream;
+                    video.play(); // Start playing the video
+                })
+                .catch(function (err) {
+                    console.error('Error accessing the camera: ', err);
+                    alert('Error accessing the camera. Please check browser permissions and try again.');
+                });
+
+            var loginButton = document.getElementById('loginButton');
+            loginButton.style.display = 'block';
+        }
+
+        
+        // Call the openCamera function when the page loads
+        window.onload = function () {
+            openCamera();
+        };
+    </script>
+    <script src="/static/js/script.js"></script>
+</body>
+
+</html>
